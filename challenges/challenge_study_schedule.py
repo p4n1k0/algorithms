@@ -9,4 +9,4 @@ def study_schedule(permanence_period, target_time):
     except Exception:
 #None se permanence_period houver alguma entrada inválida e se target_time
 # recebe valor vazio
-        None 
+        None
