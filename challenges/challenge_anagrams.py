@@ -1,13 +1,12 @@
-def merge_string(first_str, second_str, index_str=0, index_str2=0,
-                 merged_str=''):
-    while index_str < len(first_str) and index_str2 < len(second_str):
-        if first_str[index_str] < second_str[index_str2]:
-            merged_str += first_str[index_str]
-            index_str += 1
+def merge_string(str, str2, i_str=0, i_str2=0, merge_str=''):
+    while i_str < len(str) and i_str2 < len(str2):
+        if str[i_str] < str2[i_str2]:
+            merge_str += str[i_str]
+            i_str += 1
         else:
-            merged_str += second_str[index_str2]
-            index_str2 += 1
-    return merged_str + first_str[index_str:] + second_str[index_str2:]
+            merge_str += str2[i_str2]
+            i_str2 += 1
+    return merge_str + str[i_str:] + str2[i_str2:]
 
 
 def sort_string(str):
@@ -17,9 +16,7 @@ def sort_string(str):
                         sort_string(str[len(str) // 2:]))
 
 
-def is_anagram(first_str, second_str):
-    first_str = sort_string(first_str.lower())
-    second_str = sort_string(second_str.lower())
-    is_anagram = first_str, second_str,
-    first_str != '' and first_str == second_str
-    return is_anagram
+def is_anagram(str, str2):
+    str = sort_string(str.lower())
+    str2 = sort_string(str2.lower())
+    return str, str2, str != '' and str == str2
