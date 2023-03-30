@@ -6,14 +6,12 @@ def merge_string(first_str, second_str, index_str=0, index_str2=0, merged_str=''
         else:
             merged_str += second_str[index_str2]
             index_str2 += 1
-    merged = merged_str + first_str[index_str:] + second_str[index_str2:]
-    return merged
+    return merged_str + first_str[index_str:] + second_str[index_str2:]
 
 def sort_string(str):
     if len(str) <= 1:
-        return str
-    sorted = merge_string(sort_string(str[:len(str) // 2]), sort_string(str[len(str) // 2:]))
-    return sorted
+        return str 
+    return merge_string(sort_string(str[:len(str) // 2]), sort_string(str[len(str) // 2:]))
 
 def is_anagram(first_str, second_str):
     first_str = sort_string(first_str.lower())
