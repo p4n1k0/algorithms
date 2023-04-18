@@ -1,5 +1,5 @@
 def find_duplicate(nums):
-    if len(nums) <= 1:
+    if len(nums) < 1:
         False
     nums.sort()
     for index in range(len(nums) - 1):
